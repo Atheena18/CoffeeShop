@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #10100f;
+            padding: 10px;
+        }
+
+        header nav h1 {
+            display: inline-block;
+            color: rgb(229, 236, 229);
+        }
+
+        header nav ul {
+            display: inline-block;
+            list-style: none;
+            float: right;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: rgb(235, 241, 235);
+            font-weight: bold;
+        }
+
+        .hero {
+            height: 80vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-text h2 {
+            font-size: 48px;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .menu-list ul {
+            list-style: none;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu-list ul li {
+            padding: 10px 0;
+            font-size: 20px;
+        }
+
+        .contact-form {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-form form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #151313;
+        }
+
+        footer {
+            background-color: #0c0a0a;
+            color: rgba(247, 246, 246, 0.911);
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header nav ul {
+                float: none;
+                text-align: center;
+            }
+
+            .hero-text h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Coffee Bliss</h1>
+            <ul>
+                <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                <li><a href="#menu" onclick="showPage('menu')">Menu</a></li>
+                <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero" style="background-image:url(https://img.goodfon.com/wallpaper/big/5/2b/kofe-kofeinye-zerna-napitok-listia-fon.webp);">
+        <div class="hero-text;">
+            <h2 style="color:blanchedalmond">Welcome to Coffee Bliss </h2>
+            <p>Your perfect coffee, brewed fresh every day!</p>
+            <a href="#menu" class="btn" onclick="showPage('menu')">Explore Menu</a>
+        </div>
+    </section>
+
+    <section id="menu" class="hero" style="background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDR8fGNvZmZlZXxlbnwwfHx8fDE2OTU5MjY1NTM&ixlib=rb-1.2.1&q=80&w=1080'); display: none;">
+        <div class="hero-text">
+            <h2>Our Menu</h2>
+            <p>Discover the best coffee, brewed just for you.</p>
+        </div>
+    </section>
+
+    <section class="menu-list" id="menu-list" style="background-image:url(https://i.pinimg.com/736x/51/22/4b/51224b12620199d0331803ea28e93671.jpg);diplay:none;">
+       <center> <h1 style="color:rgba(53, 47, 33, 0.461);font-size: 100px;">Popular Coffees</h1>
+        </center>
+        <ul>
+            <li>
+                <img src="https://imgs.search.brave.com/TA5zM0Y03MNBmvxm4hwMHsJ_WvohkAtifYaL2uHvsf4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTIz/MzcwODIyL3Bob3Rv/L2VzcHJlc3NvLW1h/Y2hpbmUuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTJVb21h/SWdzbG9xMTMxS2xB/YTNNNG1ZV0xhM1J5/Q2VFTjNBa0NPR3BQ/ak09"; style="width:600px; height:500px "></br>
+               <h1> Espresso-$5.80</h1>
+            </li></hr>
+            <li>
+                <image src="https://imgs.search.brave.com/WkGqjhU5Jt4lLaN6M99hsO0p0iMmauLw143Iz8oOEcU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI4/MTIzNTUxMC9waG90/by9jaGFpLXRlYS1s/YXR0ZS5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9bk83Szh6/SzBYTjhTQ29PY2di/Y244ZW1vZHY2WnJY/bEcxYzhoQ0hxcDU2/Yz0";style="width:100px; height:100px;"></image></br>
+               <h1> Latte - $4.50</h1></li>
+            <li>
+                <image src="https://imgs.search.brave.com/ai3JvR55bCvUALSX7uuc7d3lqxY9ziEWVnte-u8T92k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE0/NTYxMjk1MS9waG90/by9ob3ctdG8tbWFr/ZS1jb2ZmZWUtbGF0/dGUtYXJ0LmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1lV3lT/QTA2NnpEREtlQzNX/TjlXR2VrQnNna1Bn/OXRsVnF1VnRzd2xp/WF9jPQ";style="height:100px; width:100px;"></image></br>
+                <h1>Cappuccino - $4.00</h1></li></hr>
+            <li>
+                <image src="https://imgs.search.brave.com/8P3p9qTaOsLl4EHnO0fd5LSDpWSReZZVd8Fw2OlI3fQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTAz/MDAxODkyNi9waG90/by9jb2ZmZWUtYW1l/cmljYW5vLWl0LW1h/ZGUtZnJvbS1lc3By/ZXNzby1hbmQtaG90/LXdhdGVyLXVrLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz10/cnNOdGphbEE2cjll/R2thODQ1ZU8xbllP/UDB5b2d2TFdxQkFn/LWpzQmxNPQ";style="width:100px; height:100px;"></image></br>
+                    <h1>Americano - $3.50</h1></li></hr>
+            <li>
+                <image src="https://imgs.search.brave.com/PSzYI-GW-J0V2UqRc5gF6TPkhM5iQPgL9FEiAgZhq4E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA2LzU4Lzc1Lzk4/LzM2MF9GXzY1ODc1/OTg0OV9JMW94Q1FK/V0l0dTJ6UlA5ekli/cmEzajVFZTlFcmVz/My5qcGc";style="height:100px; width:100px;"></image></br>
+                <h1>Mocha - $5.00</h1></li></hr>
+        </ul>
+    </section>
+
+    <section id="contact" class="hero" style="background-image: url(https://imgs.search.brave.com/hW-nOwFHCHSpRixT3af2qg9wSJj0nPSu-mJb58AQ16I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9j/dXAtY29mZmVlLXdp/dGgtc2F1Y2VyLXRh/YmxlLXdpdGgtZGVm/b2N1cy1jYWZlLWJh/Y2tncm91bmRfMjMt/MjE0ODIwOTI2Mi5q/cGc_c2l6ZT02MjYm/ZXh0PWpwZw);display: none;">
+        <div class="hero-text">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you!</p>
+        </div>
+    </section>
+
+    <section class="contact-form" id="contact-form" style="background-image:url(https://i.pinimg.com/originals/70/c5/35/70c535d04f8d18e221f76cf1e4f6c008.jpg);display:none;";>
+        <h2>Get in Touch</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <button type="submit">Send Message:</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Coffee Bliss. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(page) {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('menu-list').style.display = 'none';
+            document.getElementById('contact').style.display = 'none';
+            document.getElementById('contact-form').style.display = 'none';
+
+            if (page === 'home') {
+                document.getElementById('home').style.display = 'flex';
+            } else if (page === 'menu') {
+                document.getElementById('menu').style.display = 'flex';
+                document.getElementById('menu-list').style.display = 'block';
+            } else if (page === 'contact') {
+                document.getElementById('contact').style.display = 'flex';
+                document.getElementById('contact-form').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
